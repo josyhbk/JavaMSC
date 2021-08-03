@@ -1,0 +1,60 @@
+<form>
+
+  <div class="row">
+    <div class="col-md-2 pr-md-1">
+      <div class="form-group">
+        <label>ID Cliente </label>
+        <input type="text" class="form-control"  value="" id="idCliente" >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 pr-md-1">
+      <div class="form-group">
+        <label>Fecha </label>
+        <input type="date" class="form-control" id="fechaSolicitud">
+      </div>
+    </div>
+    <div class="col-md-2 pr-md-1">
+      <div class="form-group">
+        <label>Monto A solicitar</label>
+        <input type="number" class="form-control" id="montoASolicitar" onkeyup="calcularInteres(this)">
+      </div>
+    </div>
+    <div class="col-md-1 px-md-1">
+      <div class="form-group">
+        <label>Cuota Mensual</label>
+        <select name="select" class="form-control" id="cuotaMensual" onchange="calcularInteres(this)">
+          <option class="form-control" value="12" style="color:black">12</option>
+          <option class="form-control" value="24" style="color:black">24</option>
+          <option class="form-control" value="36" style="color:black">36</option>
+          <option class="form-control" value="48" style="color:black">48</option>
+          <option class="form-control" value="60" style="color:black">60</option>
+          <option class="form-control" value="72" style="color:black">72</option>
+          <option class="form-control" value="84" style="color:black">84</option>
+          <option class="form-control" value="96" style="color:black">96</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-2 px-md-1">
+      <div class="form-group">
+        <label>Tasa Aplicada %</label>
+        <input type="text" class="form-control"  disabled="" id="tasaAplicada">
+      </div>
+    </div>
+    <div class="col-md-2 px-md-1">
+      <div class="form-group">
+        <label>Interes Total</label>
+        <input type="text" class="form-control"  disabled="" id="interesTotal">
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-fill btn-primary" onclick="enviarSolicitud()">Enviar Solicitud</button>
+    </div>
+  </div>
+
+
+
+  </div>
+
+</form>
